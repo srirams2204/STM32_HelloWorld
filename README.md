@@ -56,8 +56,6 @@ HAL_Delay(1000);                                       // Wait for 1 second
 2. 220Ω current-limiting resistor
 3. Jumper wires
 
-### Code Overview
-
 ### Pin Configuration
 
 |     STM32F407G-DISC    |           LED           | 
@@ -65,6 +63,7 @@ HAL_Delay(1000);                                       // Wait for 1 second
 | LED positive (anode)   | PC1 via 220Ω resistor   | 
 | LED negative (cathode) | GND                     | 
 
+### Code Overview
 
 ## Contributors
 - [@Sriram S](https://github.com/srirams2204)
