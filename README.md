@@ -28,8 +28,10 @@ Link to STM32F407G-DISC1 ---> https://www.st.com/en/evaluation-tools/stm32f4disc
 
 ### Pin Configuration
 
-- LED positive (anode) → PC1 via 220Ω resistor
-- LED negative (cathode) → GND
+|     STM32F407G-DISC    |           LED           | 
+|------------------------|-------------------------|
+| LED positive (anode)   | PC1 via 220Ω resistor   | 
+| LED negative (cathode) | GND                     | 
 
 ### Code Overview
 ```c
