@@ -50,6 +50,22 @@ HAL_Delay(1000);                                       // Wait for 1 second
 <div align="center">
   <img src="https://github.com/LeninValentine06/STM32_HelloWorld/blob/2cd2cf001b1ecbaec113c7af238500b1bcc9b18b/assets/BLINK-LED.gif" width="800"></div>
 
+## Blink and Fade LED
+### Hardware Requirements
+1. LED (Any color)
+2. 220Ω current-limiting resistor
+3. Jumper wires
+
+### Code Overview
+
+### Pin Configuration
+
+|     STM32F407G-DISC    |           LED           | 
+|------------------------|-------------------------|
+| LED positive (anode)   | PC1 via 220Ω resistor   | 
+| LED negative (cathode) | GND                     | 
+
+
 ## Contributors
 - [@Sriram S](https://github.com/srirams2204)
 - [@Lenin Valentine](https://github.com/LeninValentine06)
