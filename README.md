@@ -9,8 +9,18 @@
 - [ADC (Analog to Digital Converter)](#adc-analog-to-digital-converter)
 - [Contributors](#contributors)
 - [References](#references)
-- 
-## 1. Blinking LED with STM32F407VGT6
+
+## Overview
+This repository provides basic programs for STM32 microcontrollers, including LED blinking, serial print (UART), and ADC reading. While these examples are compatible with most STM32 boards, the STM32F407G-DISC1 is used for programming and testing. The code is developed using STM32CubeIDE with HAL libraries, offering a foundation for embedded systems development.
+
+Link to STM32F407G-DISC1 ---> https://www.st.com/en/evaluation-tools/stm32f4discovery.html
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/ed98e83f-f1c6-48b0-84dd-4d02ee2a9480" width="800"></div>
+
+
+
+## Blinking LED 
 ### Hardware Requirements
 1. LED (Any color)
 2. 220Ω current-limiting resistor
