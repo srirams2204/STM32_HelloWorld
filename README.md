@@ -4,7 +4,7 @@
 - [Overview](#overview)
 - [Blinking LED](#blinking-led)
 - [Blink and Fade LED](#blink-and-fade-led)
-- [Serial Print with ITM Data Console](#serial-print-with-itm-data-console)
+- [Printf with ITM Data Console](#printf-with-itm-data-console)
 - [PWM Generation and Duty Cycle](#pwm-generation-and-duty-cycle)
 - [ADC (Analog to Digital Converter)](#adc-analog-to-digital-converter)
 - [Contributors](#contributors)
@@ -17,8 +17,6 @@ Link to STM32F407G-DISC1 ---> https://www.st.com/en/evaluation-tools/stm32f4disc
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/ed98e83f-f1c6-48b0-84dd-4d02ee2a9480" width="800"></div>
-
-
 
 ## Blinking LED 
 ### Hardware Requirements
