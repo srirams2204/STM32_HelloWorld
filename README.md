@@ -68,4 +68,4 @@ HAL_Delay(1000);                                       // Wait for 1 second
 - [@Lenin Valentine](https://github.com/LeninValentine06)
 
 ## Reference
-
+***Mastering STM32*** - A step-by-step guide to the most complete ARM Cortex-M platform, using the official STM32Cube development environment **(By Carmine Noviello)**
