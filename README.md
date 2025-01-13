@@ -82,8 +82,10 @@ int _write(int file, char *ptr, int len){
 ```
 ***Main***
 ```c
-printf("Hello World!\n");
-HAL_Delay(1000);
+while(1){
+   printf("Hello World!\n");
+   HAL_Delay(1000);
+}
 ```
 
 ### Demo
