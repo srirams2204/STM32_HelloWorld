@@ -2,11 +2,8 @@
 
 ## Table of Contents
 - [Overview](#overview)
-- [Blinking LED](#blinking-led)
-- [Blink and Fade LED](#blink-and-fade-led)
-- [Printf with ITM Data Console](#printf-with-itm-data-console)
-- [PWM Generation and Duty Cycle](#pwm-generation-and-duty-cycle)
-- [ADC (Analog to Digital Converter)](#adc-analog-to-digital-converter)
+- [Blinking LED](#blinking-led) <!-- - [Blink and Fade LED](#blink-and-fade-led) -->
+- [Printf with ITM Data Console](#printf-with-itm-data-console)<!-- - [PWM Generation and Duty Cycle](#pwm-generation-and-duty-cycle) --><!-- - [ADC (Analog to Digital Converter)](#adc-analog-to-digital-converter) -->
 - [Contributors](#contributors)
 - [References](#references)
 
@@ -62,6 +59,36 @@ HAL_Delay(1000);                                       // Wait for 1 second
 | LED negative (cathode) | GND                     | 
 
 ### Code Overview
+
+## Printf with ITM Data Console
+### Hardware Requirements
+1. STM32 Board
+2. Programming Cable
+   
+### Code Overview
+***Include***
+```c
+#include "stdio.h"
+```
+***ITM Printf Function***
+```c
+int _write(int file, char *ptr, int len){
+	int i = 0;
+	for (i = 0; i < len; i++){
+		ITM_SendChar(*ptr++);
+	}
+	return len;
+}
+```
+***Main***
+```c
+printf("Hello World!\n");
+HAL_Delay(1000);
+```
+
+### Demo
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/60fd0dd1-5a37-4eeb-9ae8-d8a2d4186d81" width="800"></div>
 
 ## Contributors
 - [@Sriram S](https://github.com/srirams2204)
