@@ -2,11 +2,8 @@
 
 ## Table of Contents
 - [Overview](#overview)
-- [Blinking LED](#blinking-led)
-- [Blink and Fade LED](#blink-and-fade-led)
-- [Printf with ITM Data Console](#printf-with-itm-data-console)
-- [PWM Generation and Duty Cycle](#pwm-generation-and-duty-cycle)
-- [ADC (Analog to Digital Converter)](#adc-analog-to-digital-converter)
+- [Blinking LED](#blinking-led) <!-- - [Blink and Fade LED](#blink-and-fade-led) -->
+- [Printf with ITM Data Console](#printf-with-itm-data-console)<!-- - [PWM Generation and Duty Cycle](#pwm-generation-and-duty-cycle) --><!-- - [ADC (Analog to Digital Converter)](#adc-analog-to-digital-converter) -->
 - [Contributors](#contributors)
 - [References](#references)
 
@@ -48,20 +45,37 @@ HAL_Delay(1000);                                       // Wait for 1 second
 <div align="center">
   <img src="https://github.com/LeninValentine06/STM32_HelloWorld/blob/2cd2cf001b1ecbaec113c7af238500b1bcc9b18b/assets/BLINK-LED.gif" width="800"></div>
 
-## Blink and Fade LED
+## Printf with ITM Data Console
 ### Hardware Requirements
-1. LED (Any color)
-2. 220Ω current-limiting resistor
-3. Jumper wires
-
-### Pin Configuration
-
-|     STM32F407G-DISC    |           LED           | 
-|------------------------|-------------------------|
-| LED positive (anode)   | PC1 via 220Ω resistor   | 
-| LED negative (cathode) | GND                     | 
-
+1. STM32 Board
+2. Programming Cable
+   
 ### Code Overview
+***Include***
+```c
+#include "stdio.h"
+```
+***ITM Printf Function***
+```c
+int _write(int file, char *ptr, int len){
+	int i = 0;
+	for (i = 0; i < len; i++){
+		ITM_SendChar(*ptr++);
+	}
+	return len;
+}
+```
+***Main***
+```c
+while(1){
+   printf("Hello World!\n");
+   HAL_Delay(1000);
+}
+```
+
+### Demo
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/60fd0dd1-5a37-4eeb-9ae8-d8a2d4186d81" width="800"></div>
 
 ## Contributors
 - [@Sriram S](https://github.com/srirams2204)
