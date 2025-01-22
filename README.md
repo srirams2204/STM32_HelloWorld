@@ -4,6 +4,7 @@
 - [Overview](#overview)
 - [Blinking LED](#blinking-led) <!-- - [Blink and Fade LED](#blink-and-fade-led) -->
 - [Printf with ITM Data Console](#printf-with-itm-data-console)<!-- - [PWM Generation and Duty Cycle](#pwm-generation-and-duty-cycle) --><!-- - [ADC (Analog to Digital Converter)](#adc-analog-to-digital-converter) -->
+- [Timer Activation](#timer-activation)
 - [Contributors](#contributors)
 - [References](#references)
 
