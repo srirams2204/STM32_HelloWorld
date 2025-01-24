@@ -4,7 +4,7 @@
 - [Overview](#overview)
 - [Blinking LED](#blinking-led) <!-- - [Blink and Fade LED](#blink-and-fade-led) -->
 - [Printf with ITM Data Console](#printf-with-itm-data-console)<!-- - [PWM Generation and Duty Cycle](#pwm-generation-and-duty-cycle) --><!-- - [ADC (Analog to Digital Converter)](#adc-analog-to-digital-converter) -->
-- [Timer Activation](#timer-activation)
+- [1Hz Signal Generator Timer](#1hz-signal-generator-timer)
 - [Contributors](#contributors)
 - [References](#references)
 
@@ -77,6 +77,36 @@ while(1){
 ### Demo
 <div align="center">
   <img src="https://github.com/user-attachments/assets/60fd0dd1-5a37-4eeb-9ae8-d8a2d4186d81" width="800"></div>
+  
+## 1Hz Signal Generator Timer
+### Hardware Requirements
+- LED (Any color)
+- 220Ω current-limiting resistor
+- Jumper wires
+
+### Timer Configuration
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/96f93230-a93d-4f0e-a2da-adcdfe64811d" width="800"></div>
+
+### TIMER Frequency Formula & Prescalar Calculation
+From the Timer Configuration image HCLK is '100MHz'  
+**Prescaler** - Divides the timer HCLK by a factor ranging between 1 upto 65,535 (i.e unsigned 16-bit integer values)
+**Period** - Maximum value for the timer counter before it restarts to count again (i.e unsigned 16-bit integer values)
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/c33ea9d1-a5cc-4438-851c-a8df723f75e9" width="800"></div>
+
+```
+HCLK = 100000000 Hz or 100MHz
+HCLK / 10,000 = 10,000
+         |
+     PRESCALAR
+10,000 / 10,000 = 1Hz
+           |
+        PERIOD
+Prescaler (PSC - 16 bits value) = 10,000 - 1 = 9999 
+Counter Period (AutoReload Register - 32 bits value ) = 10,000 - 1 = 9999 
+```
 
 ## Contributors
 - [@Sriram S](https://github.com/srirams2204)
