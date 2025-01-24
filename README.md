@@ -119,9 +119,13 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 Activate the Selected Timer
 ```
 /* USER CODE BEGIN 2 */
-  HAL_TIM_Base_Start_IT(&htim2);
-  /* USER CODE END 2 */
+HAL_TIM_Base_Start_IT(&htim2);
+/* USER CODE END 2 */
 ```
+
+### Demo
+<div align="center">
+  <img src="https://github.com/srirams2204/STM32_HelloWorld/blob/ce64435ad578df577c9ede1e74380eb12ef0e5e3/assets/TIMER_1Hz.gif" width="800"></div>
 
 ## Contributors
 - [@Sriram S](https://github.com/srirams2204)
