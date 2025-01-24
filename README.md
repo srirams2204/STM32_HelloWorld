@@ -107,6 +107,21 @@ HCLK / 10,000 = 10,000
 Prescaler (PSC - 16 bits value) = 10,000 - 1 = 9999 
 Counter Period (AutoReload Register - 32 bits value ) = 10,000 - 1 = 9999 
 ```
+### Code Overview
+If the period exceed the total amount it will reset, interrupt and start again
+```
+/* USER CODE BEGIN 0 */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_15);
+}
+/* USER CODE END 0 */
+```
+Activate the Selected Timer
+```
+/* USER CODE BEGIN 2 */
+  HAL_TIM_Base_Start_IT(&htim2);
+  /* USER CODE END 2 */
+```
 
 ## Contributors
 - [@Sriram S](https://github.com/srirams2204)
