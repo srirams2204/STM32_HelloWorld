@@ -127,6 +127,10 @@ HAL_TIM_Base_Start_IT(&htim2);
 <div align="center">
   <img src="https://github.com/srirams2204/STM32_HelloWorld/blob/ce64435ad578df577c9ede1e74380eb12ef0e5e3/assets/TIMER_1Hz.gif" width="800"></div>
 
+### Logic Analyzer Output
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/72ae8bd3-c6af-44d9-b4fb-95c07ab2d5dd" width="800"></div>
+
 ## Contributors
 - [@Sriram S](https://github.com/srirams2204)
 - [@Lenin Valentine](https://github.com/LeninValentine06)
